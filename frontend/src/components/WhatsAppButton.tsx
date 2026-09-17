@@ -19,12 +19,12 @@ export const WhatsAppButton: React.FC<WhatsAppButtonProps> = ({
         rel="noopener noreferrer"
         aria-label="Chat with Hakuna Potata on WhatsApp"
         title="Chat on WhatsApp (+880 1339656675)"
-        className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-white shadow-[0_8px_25px_rgba(0,0,0,0.22)] hover:shadow-[0_12px_32px_rgba(0,0,0,0.35)] transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer p-0.5 border border-neutral-200/80"
+        className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer"
       >
         <img
           src="https://img.icons8.com/?size=100&id=62855&format=png&color=000000"
           alt="WhatsApp"
-          className="w-full h-full object-contain filter drop-shadow-xs"
+          className="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.30)] hover:drop-shadow-[0_12px_28px_rgba(0,0,0,0.42)]"
           onError={(e) => {
             (e.currentTarget as HTMLImageElement).src = '/whatsapp-icon.png';
           }}
