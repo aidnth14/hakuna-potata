@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Dark circle background for crisp contrast -->
+  <circle cx="50" cy="50" r="48" fill="#18181b" />
+  <!-- White potato rotated 15 degrees right around center (50, 50) -->
+  <g transform="rotate(15 50 50)">
+    <!-- Potato body -->
+    <path d="M50,22 C68,20 80,32 82,48 C84,65 72,78 52,80 C34,82 20,70 18,52 C16,36 32,24 50,22 Z" fill="#FFFFFF" />
+    <!-- Potato dimples/eyes in subtle shade -->
+    <ellipse cx="38" cy="38" rx="3" ry="2" fill="#d4d4d8" transform="rotate(-10 38 38)" />
+    <ellipse cx="62" cy="42" rx="3.5" ry="2.2" fill="#d4d4d8" transform="rotate(15 62 42)" />
+    <ellipse cx="44" cy="62" rx="4" ry="2.5" fill="#d4d4d8" transform="rotate(5 44 62)" />
+    <ellipse cx="65" cy="64" rx="2.5" ry="1.8" fill="#d4d4d8" transform="rotate(-15 65 64)" />
+    <ellipse cx="30" cy="52" rx="2.5" ry="1.8" fill="#d4d4d8" transform="rotate(20 30 52)" />
+    <!-- Cheerful cute face -->
+    <circle cx="43" cy="48" r="2.5" fill="#18181b" />
+    <circle cx="57" cy="48" r="2.5" fill="#18181b" />
+    <path d="M47,54 Q50,58 53,54" stroke="#18181b" stroke-width="2" stroke-linecap="round" fill="none" />
+    <circle cx="40" cy="52" r="2" fill="#f87171" opacity="0.6" />
+    <circle cx="60" cy="52" r="2" fill="#f87171" opacity="0.6" />
+  </g>
+</svg>
