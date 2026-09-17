@@ -1,0 +1,40 @@
+# Hakuna Potata Artisan Bakery & Custom Cake Studio
+
+> Hakuna Potata is an artisan custom cake studio and boutique bakery in Dhaka, Bangladesh, specializing in bespoke Korean Bento cakes, Vintage Lambeth royal piping, gourmet single-tier confections, and celebratory two-tier towers. Built as a hyper-optimized web application (<1MB bundle) by @nonamedevs.
+
+## Overview & Online Experience
+- [Storefront & Custom Studio](https://hakunabakery.vercel.app): Interactive bespoke cake customizer, visual size guide, flavor palette selector, and instant checkout.
+- [Cake Size & Tower Reference Guide](https://hakunabakery.vercel.app/order): Dedicated specification guide comparing single tier diameters, serving portions, slice estimates, and two-layer stacked towers.
+- [Creator & Developer Studio](https://nonamedevs.vercel.app): Built by @nonamedevs.
+
+## Cake Sizes & Base Pricing
+- **4″ Bento Cake**: ৳1,200 · 2–4 servings (2-4 slices) · 4″ diameter · Perfect for intimate gifting and personal milestones.
+- **6″ Celebration Cake**: ৳1,800 · 6–8 servings (6-8 slices) · 6″ diameter · Popular size for family celebrations.
+- **8″ Best Seller Cake**: ৳2,800 · 12–16 servings (12-16 slices) · 8″ diameter · Most popular centerpiece size.
+- **10″ Feast Cake**: ৳4,200 · 20–26 servings (20-26 slices) · 10″ diameter · Ideal for grand parties and weddings.
+- **Two-Layer Stacked Towers**:
+  - Mini Tower: 4″ top tier on 6″ bottom tier (8–12 servings)
+  - Grand Tower: 6″ top tier on 8″ bottom tier (18–24 servings)
+  - Majestic Tower: 8″ top tier on 10″ bottom tier (32–42 servings)
+
+## Flavor & Ingredient Specifications
+- **Artisan Sponges**: Belgian Chocolate, Vanilla Bean, Pistachio Rose, Red Velvet, Salted Caramel.
+- **Fillings & Creams**: Swiss Buttercream, Belgian Ganache, Cream Cheese, Raspberry Compote, Salted Caramel Cream.
+- **Dietary Customization**: 100% Pure Eggless sponge available (+৳250).
+- **Aesthetic Palettes**: Minimalist Monochrome Noir & Pearl, Pastel Blossom & Cream, Sage Botanical, Vintage Lambeth Ribbon & Cherries.
+
+## Fulfillment & Courier Rates
+- **Inside Dhaka**: ৳100 flat-rate delivery.
+- **Outside Dhaka / Greater Dhaka Suburbs**: ৳120 courier rate.
+- **Bakery Pickup**: Free pickup at Bashundhara R/A, Block F, Dhaka.
+
+## Automated Invoicing & Brevo Integration
+- Every custom order placed via the studio triggers an automated transactional pipeline via Brevo (Sendinblue) API.
+- Customer receives an itemized HTML invoice with order ID, date, specs, address, dietary details, and grand total.
+- Bakery operations team concurrently receives real-time notification at `hakunapotatabakery@gmail.com`.
+
+## Direct Contacts
+- WhatsApp Concierge: [+880 1339656675](https://wa.me/8801339656675)
+- Telephone: +880 1339656675
+- Bakery Email: hakunapotatabakery@gmail.com
+- Physical Studio: Bashundhara R/A, Block F, Dhaka, Bangladesh
