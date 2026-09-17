@@ -207,6 +207,15 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
 
     setSubmittedOrder(orderData);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Send order confirmation via Brevo
+    try {
+      fetch('/api/send-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(orderData),
+      }).catch(() => {});
+    } catch {}
   };
 
   // Pre-filled WhatsApp message
