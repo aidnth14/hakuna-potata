@@ -9,6 +9,7 @@ import {
   ChevronRight,
   Truck,
   FileImage,
+  Mail,
 } from 'lucide-react';
 
 interface CustomOrderPageProps {
@@ -131,6 +132,7 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
   const [deliveryZone, setDeliveryZone] = useState<DeliveryZone>('inside_dhaka');
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('15:00');
   const [address, setAddress] = useState('');
@@ -200,6 +202,7 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
       time,
       name,
       phone,
+      email: email.trim(),
       address: deliveryZone === 'pickup' ? 'Bakery Pickup (Bashundhara R/A, Block F, Dhaka)' : address,
       notes,
       totalPrice: grandTotal,
@@ -243,6 +246,7 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
       `• Address: ${submittedOrder.address}%0A` +
       `• Date & Time: ${submittedOrder.date} at ${submittedOrder.time}%0A` +
       `• Customer: ${submittedOrder.name} (${submittedOrder.phone})%0A` +
+      (submittedOrder.email ? `• Email: ${submittedOrder.email}%0A` : '') +
       (submittedOrder.notes ? `• Instructions: ${submittedOrder.notes}%0A` : '') +
       `%0A` +
       `💰 *ESTIMATED TOTAL:* ৳${submittedOrder.totalPrice.toLocaleString()} (incl. delivery)%0A`;
@@ -286,6 +290,23 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
                 Your custom cake inquiry <span className="font-mono font-bold text-neutral-900">#{submittedOrder.orderId}</span> has been prepared. Click below to confirm directly with our bakers on WhatsApp!
               </p>
             </div>
+
+            {/* Email Invoice Banner */}
+            {submittedOrder.email && (
+              <div className="bg-emerald-50/90 border border-emerald-200/80 rounded-2xl p-4 mb-6 flex items-start gap-3 text-left">
+                <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="text-xs font-bold text-emerald-950">
+                    Official Invoice &amp; Receipt Emailed
+                  </div>
+                  <div className="text-[11px] text-emerald-850 mt-0.5 leading-relaxed text-neutral-600">
+                    An itemized confirmation invoice was sent to <span className="font-semibold font-mono text-emerald-950">{submittedOrder.email}</span>.
+                  </div>
+                </div>
+              </div>
+            )}
 
             {/* Receipt Summary Card */}
             <div className="bg-neutral-50 rounded-2xl p-5 border border-neutral-200/70 text-xs sm:text-sm space-y-3 mb-6">
@@ -365,6 +386,12 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
                   {submittedOrder.date} at {submittedOrder.time}
                 </span>
               </div>
+              {submittedOrder.email && (
+                <div className="flex justify-between py-1 border-b border-neutral-200">
+                  <span className="text-neutral-500">Invoice Sent To</span>
+                  <span className="font-bold text-neutral-900 font-mono text-[11px] truncate max-w-[200px] sm:max-w-xs">{submittedOrder.email}</span>
+                </div>
+              )}
               <div className="flex justify-between pt-2 text-base font-bold text-neutral-900">
                 <span>Estimated Grand Total</span>
                 <span className="text-black text-lg font-mono">৳{submittedOrder.totalPrice.toLocaleString()}</span>
@@ -908,6 +935,26 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
                             className="w-full px-3 py-2 text-xs rounded-xl border border-neutral-200 focus:border-black outline-none bg-neutral-50/50 font-mono"
                           />
                         </div>
+                      </div>
+
+                      {/* Email for Full Invoice */}
+                      <div>
+                        <div className="flex items-center justify-between mb-1">
+                          <label className="block text-xs font-bold uppercase tracking-wider text-neutral-700">
+                            Email Address *
+                          </label>
+                          <span className="text-[10px] text-neutral-400 font-medium">
+                            Official invoice will be emailed here
+                          </span>
+                        </div>
+                        <input
+                          type="email"
+                          required
+                          placeholder="your.email@example.com"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          className="w-full px-3 py-2 text-xs rounded-xl border border-neutral-200 focus:border-black outline-none bg-neutral-50/50"
+                        />
                       </div>
 
                       {/* Address */}
