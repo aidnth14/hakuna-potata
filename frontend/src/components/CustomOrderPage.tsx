@@ -134,7 +134,7 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [date, setDate] = useState('');
-  const [time, setTime] = useState('15:00');
+  const [time, setTime] = useState('02:00 PM');
   const [address, setAddress] = useState('');
   const [notes, setNotes] = useState('');
 
@@ -885,6 +885,7 @@ export const CustomOrderPage: React.FC<CustomOrderPageProps> = ({ onBack }) => {
                           <input
                             type="date"
                             required
+                            min={new Date().toISOString().split('T')[0]}
                             value={date}
                             onChange={(e) => setDate(e.target.value)}
                             className="w-full px-3 py-2 text-xs rounded-xl border border-neutral-200 focus:border-black outline-none bg-neutral-50/50 font-mono"
